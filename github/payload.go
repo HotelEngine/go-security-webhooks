@@ -6060,60 +6060,26 @@ type TeamPayload struct {
 	Team    *Team  `json:"team"`
 	Changes struct {
 		Description struct {
-			Type string `json:"type"`
-			From struct {
-				Description string `json:"description"`
-				Type        string `json:"type"`
-			} `json:"from"`
-			Required []string `json:"required"`
-		} `json:"description"`
+			From string `json:"from"`
+		} `json:"description,omitempty"`
 		Name struct {
-			Type string `json:"type"`
-			From struct {
-				Description string `json:"description"`
-				Type        string `json:"type"`
-			} `json:"from"`
-			Required []string `json:"required"`
-		} `json:"name"`
+			From string `json:"from"`
+		} `json:"name,omitempty"`
 		Privacy struct {
-			Type string `json:"type"`
-			From struct {
-				Description string `json:"description"`
-				Type        string `json:"type"`
-			} `json:"from"`
-			Required []string `json:"required"`
-		} `json:"privacy"`
+			From string `json:"from"`
+		} `json:"privacy,omitempty"`
 		NotificationSetting struct {
-			Type string `json:"type"`
-			From struct {
-				Description string `json:"description"`
-				Type        string `json:"type"`
-			} `json:"from"`
-			Required []string `json:"required"`
-		} `json:"notification_setting"`
+			From string `json:"from"`
+		} `json:"notification_setting,omitempty"`
 		Repository struct {
-			Type        string `json:"type"`
 			Permissions struct {
-				Type string `json:"type"`
 				From struct {
-					Type  string `json:"type"`
-					Admin struct {
-						Description string `json:"description"`
-						Type        string `json:"type"`
-					} `json:"admin"`
-					Pull struct {
-						Description string `json:"description"`
-						Type        string `json:"type"`
-					} `json:"pull"`
-					Push struct {
-						Description string `json:"description"`
-						Type        string `json:"type"`
-					} `json:"push"`
+					Admin bool `json:"admin"`
+					Pull  bool `json:"pull"`
+					Push  bool `json:"push"`
 				} `json:"from"`
-				Required []string `json:"required"`
 			} `json:"permissions"`
-			Required []string `json:"required"`
-		} `json:"repository"`
+		} `json:"repository,omitempty"`
 	} `json:"changes"`
 	Organization struct {
 		Login            string `json:"login"`
