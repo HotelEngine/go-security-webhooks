@@ -6060,72 +6060,58 @@ type TeamPayload struct {
 	Team    *Team  `json:"team"`
 	Changes struct {
 		Description struct {
-			Type       string `json:"type"`
-			Properties struct {
-				From struct {
-					Description string `json:"description"`
-					Type        string `json:"type"`
-				} `json:"from"`
-			} `json:"properties"`
+			Type string `json:"type"`
+			From struct {
+				Description string `json:"description"`
+				Type        string `json:"type"`
+			} `json:"from"`
 			Required []string `json:"required"`
 		} `json:"description"`
 		Name struct {
-			Type       string `json:"type"`
-			Properties struct {
-				From struct {
-					Description string `json:"description"`
-					Type        string `json:"type"`
-				} `json:"from"`
-			} `json:"properties"`
+			Type string `json:"type"`
+			From struct {
+				Description string `json:"description"`
+				Type        string `json:"type"`
+			} `json:"from"`
 			Required []string `json:"required"`
 		} `json:"name"`
 		Privacy struct {
-			Type       string `json:"type"`
-			Properties struct {
-				From struct {
-					Description string `json:"description"`
-					Type        string `json:"type"`
-				} `json:"from"`
-			} `json:"properties"`
+			Type string `json:"type"`
+			From struct {
+				Description string `json:"description"`
+				Type        string `json:"type"`
+			} `json:"from"`
 			Required []string `json:"required"`
 		} `json:"privacy"`
 		NotificationSetting struct {
-			Type       string `json:"type"`
-			Properties struct {
-				From struct {
-					Description string `json:"description"`
-					Type        string `json:"type"`
-				} `json:"from"`
-			} `json:"properties"`
+			Type string `json:"type"`
+			From struct {
+				Description string `json:"description"`
+				Type        string `json:"type"`
+			} `json:"from"`
 			Required []string `json:"required"`
 		} `json:"notification_setting"`
 		Repository struct {
-			Type       string `json:"type"`
-			Properties struct {
-				Permissions struct {
-					Type       string `json:"type"`
-					Properties struct {
-						From struct {
-							Type       string `json:"type"`
-							Properties struct {
-								Admin struct {
-									Description string `json:"description"`
-									Type        string `json:"type"`
-								} `json:"admin"`
-								Pull struct {
-									Description string `json:"description"`
-									Type        string `json:"type"`
-								} `json:"pull"`
-								Push struct {
-									Description string `json:"description"`
-									Type        string `json:"type"`
-								} `json:"push"`
-							} `json:"properties"`
-						} `json:"from"`
-					} `json:"properties"`
-					Required []string `json:"required"`
-				} `json:"permissions"`
-			} `json:"properties"`
+			Type        string `json:"type"`
+			Permissions struct {
+				Type string `json:"type"`
+				From struct {
+					Type  string `json:"type"`
+					Admin struct {
+						Description string `json:"description"`
+						Type        string `json:"type"`
+					} `json:"admin"`
+					Pull struct {
+						Description string `json:"description"`
+						Type        string `json:"type"`
+					} `json:"pull"`
+					Push struct {
+						Description string `json:"description"`
+						Type        string `json:"type"`
+					} `json:"push"`
+				} `json:"from"`
+				Required []string `json:"required"`
+			} `json:"permissions"`
 			Required []string `json:"required"`
 		} `json:"repository"`
 	} `json:"changes"`
