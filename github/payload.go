@@ -7272,6 +7272,7 @@ type Team struct {
 	Slug            string `json:"slug"`
 	Permission      string `json:"permission"`
 	URL             string `json:"url"`
+	HTMLURL         string `json:"html_url"`
 	MembersURL      string `json:"members_url"`
 	RepositoriesURL string `json:"repositories_url"`
 	Parent          *Team  `json:"parent,omitempty"`
